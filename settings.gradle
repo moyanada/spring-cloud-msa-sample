@@ -1,0 +1,5 @@
+rootProject.name = 'spring-cloud-msa-sample'
+include 'product-sample'
+include 'display-sample'
+include 'eureka-server-sample'
+include 'zuul-sample'
