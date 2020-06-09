@@ -15,3 +15,5 @@ git checkout tags/<tag 이름>
 ## 주요 단계별 Tag 설명
 
 - 'step-1' : 실습 시작
+- 'step-2' : hystrix 실습
+- 'step-3' : ribbon 실습
