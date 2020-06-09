@@ -17,7 +17,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.elevenst'
+group = 'com.product'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -27,7 +27,7 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client') // To use Eureka client
+    //compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client') // To use Eureka client
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
