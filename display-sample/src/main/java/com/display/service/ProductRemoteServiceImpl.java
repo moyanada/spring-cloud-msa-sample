@@ -17,6 +17,7 @@ public class ProductRemoteServiceImpl implements ProductRemoteService {
 	/**
 	 * Hystrix 기본 콜백시간은 1초
 	 * commandKey는 해당 키에만 circuit breaker가 적용된다
+	 * https://github.com/Netflix/Hystrix/wiki/Configuration
 	 */
 	@Override
 	@HystrixCommand(commandKey = "ExtDep1", fallbackMethod = "getProductInfoFallback")
