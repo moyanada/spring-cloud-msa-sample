@@ -9,3 +9,14 @@ logging:
   level:
     org.springframework : info
     org.springframework.web : debug
+    
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000 #hystrix 응답 시간 1초
+      circuitBreaker:
+        requestVolumeThreshold: 1   # 10초동안 1번의 에러가 발생하면 circuit open
+        errorThresholdPercentage: 50 # 50% 이상이면
