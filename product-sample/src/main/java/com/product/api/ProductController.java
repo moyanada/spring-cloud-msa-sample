@@ -15,13 +15,13 @@ public class ProductController {
     	//1. 억지로 에러를 던져보자
 //    	throw new RuntimeException("I/O Exception");
     	//2. sleep을 줘서 응답시간을 지연 시켜보자
-    	try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	System.out.println("called product id :: " + productId);
+//    	try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//    	System.out.println("called product id :: " + productId);
         return "[product id = " + productId + " at " + System.currentTimeMillis() + "]";
     }
 }

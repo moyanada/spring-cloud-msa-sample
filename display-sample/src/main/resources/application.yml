@@ -16,9 +16,9 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 1000 #hystrix 응답 시간 1초
+            timeoutInMilliseconds: 3000 #hystrix 응답 시간 1초
       circuitBreaker:
-        requestVolumeThreshold: 1   # 10초동안 1번의 에러가 발생하면 circuit open
+        requestVolumeThreshold: 2   # 10초동안 1번의 에러가 발생하면 circuit open
         errorThresholdPercentage: 50 # 50% 이상이면
         
 #hystrix:
@@ -30,4 +30,11 @@ hystrix:
             #timeoutInMilliseconds: 1000 #hystrix 응답 시간 1초
       #circuitBreaker:
         #requestVolumeThreshold: 1   # 10초동안 1번의 에러가 발생하면 circuit open
-        #errorThresholdPercentage: 50 # 50% 이상이면        
+        #errorThresholdPercentage: 50 # 50% 이상이면
+
+## https://github.com/Netflix/ribbon/wiki/Getting-Started
+product:
+  ribbon:
+    listOfServers: localhost:8082,localhost:7777 #기본적으로 RoundRobin방식으로 함
+    MaxAutoRetries: 0
+    MaxAutoRetriesNextServer: 1

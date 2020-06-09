@@ -9,7 +9,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class ProductRemoteServiceImpl implements ProductRemoteService {
 
-	private static final String URL = "http://localhost:8082/products/";
+	private static final String URL = "http://product/products/";
 
 	@Autowired
 	private RestTemplate restTemplate;
