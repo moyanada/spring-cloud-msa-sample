@@ -9,3 +9,10 @@ logging:
   level:
     org.springframework : info
     org.springframework.web : debug
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka  # default address
