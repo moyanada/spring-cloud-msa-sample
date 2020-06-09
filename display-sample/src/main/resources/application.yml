@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: display
+
+logging:
+  level:
+    org.springframework : info
+    org.springframework.web : debug

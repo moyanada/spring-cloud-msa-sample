@@ -14,4 +14,4 @@ git checkout tags/<tag 이름>
 
 ## 주요 단계별 Tag 설명
 
-- 'step-1' : 실습시작
+- 'step-1' : 실습 시작
