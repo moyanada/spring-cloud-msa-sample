@@ -20,6 +20,11 @@ hystrix:
       circuitBreaker:
         requestVolumeThreshold: 2   # 10초동안 1번의 에러가 발생하면 circuit open
         errorThresholdPercentage: 50 # 50% 이상이면
+
+#이렇게 하면 feign 사용시 hystrix 사용할수 있음        
+feign:
+  hystrix:
+    enabled: true
         
 #hystrix:
   #command:

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.display.service.FeignProductRemoteService;
 import com.display.service.ProductRemoteService;
 
 @RestController
@@ -15,6 +16,9 @@ public class DisplayController {
 	@Autowired
 	private ProductRemoteService productRemoteService;
 
+	@Autowired
+	private FeignProductRemoteService feignProductRemoteService;
+
 	@GetMapping(path = "/{displayId}")
     public String getDisplayDetail(@PathVariable String displayId) {
         String productInfo = getProductInfo();
@@ -22,6 +26,7 @@ public class DisplayController {
     }
 
 	private String getProductInfo() {
-		return productRemoteService.getProductInfo("12345");
+//		return productRemoteService.getProductInfo("12345");
+		return feignProductRemoteService.getProductInfo("12345");
 	}
 }
